@@ -3,16 +3,20 @@ import fresh_tomatoes
 from tmdb3 import set_key, Movie
 from random import randint
 
-# API key for 
-set_key('')
-
+# API key for The Movie Database
+set_key('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+         
+# Counter to count for n movies on the site
 m_ctr = 0
+# list containing movie objects
 movie_list = []
 
 while m_ctr < 5:
     try:
+        # Generate a random integer to be used as ID for the movie
         movie_id = randint(0, 2000)
         movie = Movie(movie_id)
+        # If the returned movie lacks any required info., skip it
         if hasattr(movie, 'title'):
             title = movie.title
         else:
