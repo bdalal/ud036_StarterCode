@@ -3,12 +3,13 @@ import fresh_tomatoes
 from tmdb3 import set_key, Movie
 from random import randint
 
-set_key('bf277b2f54255cc09463930d16f832b0')
+# API key for 
+set_key('')
 
 m_ctr = 0
 movie_list = []
 
-while m_ctr < 9:
+while m_ctr < 5:
     try:
         movie_id = randint(0, 2000)
         movie = Movie(movie_id)
