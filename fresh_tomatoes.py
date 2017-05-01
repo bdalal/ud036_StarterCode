@@ -77,8 +77,8 @@ main_page_head = '''
         });
         // Animate in the movies when the page loads
         $(document).ready(function () {
-          $('.movie-tile').hide().first().show("fast", function showNext() {
-            $(this).next("div").show("fast", showNext);
+         $('.movie-title').hide().first().show("fast", function showNext() {
+           $(this).next("div").show("fast", showNext);
           });
         });
     </script>
@@ -115,6 +115,21 @@ main_page_content = '''
     <div class="container">
       {movie_tiles}
     </div>
+
+    <!-- Credits for TMDB -->
+    <center>
+      <div>
+        <span>
+          <img src="https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png" 
+          style="width: 200px; height: 100px;"/>
+        </span> <br>
+        <span>
+          This product uses the TMDb API but is not endorsed or certified by TM
+          Db.
+        </span>
+      </div>
+    </center>
+
   </body>
 </html>
 '''
@@ -131,6 +146,7 @@ movie_tile_content = '''
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
+    row_ctr = 1
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -142,11 +158,29 @@ def create_movie_tiles_content(movies):
                               else None)
 
         # Append the tile for the movie with its content filled in
-        content += movie_tile_content.format(
-            movie_title=movie.title,
-            poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
-        )
+        if row_ctr % 3 == 1:
+            content += '<div class="movie-title" style="display: block; overflow: auto;">' # NOQA
+            content += movie_tile_content.format(
+                 movie_title=movie.title,
+                 poster_image_url=movie.poster_image_url,
+                 trailer_youtube_id=trailer_youtube_id
+            )
+            row_ctr += 1
+        elif row_ctr % 3 == 0:
+            content += movie_tile_content.format(
+                 movie_title=movie.title,
+                 poster_image_url=movie.poster_image_url,
+                 trailer_youtube_id=trailer_youtube_id
+            )
+            content += '</div>'
+            row_ctr += 1
+        else:
+            content += movie_tile_content.format(
+                 movie_title=movie.title,
+                 poster_image_url=movie.poster_image_url,
+                 trailer_youtube_id=trailer_youtube_id
+            )
+            row_ctr += 1
     return content
 
 
