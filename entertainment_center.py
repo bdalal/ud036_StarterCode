@@ -11,7 +11,7 @@ m_ctr = 0
 # list containing movie objects
 movie_list = []
 
-while m_ctr < 5:
+while m_ctr < 9:
     try:
         # Generate a random integer to be used as ID for the movie
         movie_id = randint(0, 2000)
