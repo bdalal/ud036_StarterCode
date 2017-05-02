@@ -116,7 +116,7 @@ main_page_content = '''
       {movie_tiles}
     </div>
 
-    <!-- Credits for TMDB -->
+    <!-- Credits for TMDB as required by their license agreement -->
     <center>
       <div>
         <span>
@@ -145,8 +145,9 @@ movie_tile_content = '''
 
 
 def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
+    # Counter for keeping track of the number of tiles printed
     row_ctr = 1
+    # The HTML content for this section of the page    
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
@@ -158,6 +159,10 @@ def create_movie_tiles_content(movies):
                               else None)
 
         # Append the tile for the movie with its content filled in
+        ''' Wrap every third movie in a new div to facilitate autosizing of the
+            divs and prevent the display from moving to the new line because of
+            long movie titles
+        '''
         if row_ctr % 3 == 1:
             content += '<div class="movie-title" style="display: block; overflow: auto;">' # NOQA
             content += movie_tile_content.format(

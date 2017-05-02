@@ -4,8 +4,8 @@ from tmdb3 import set_key, Movie
 from random import randint
 
 # API key for The Movie Database
-set_key('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-         
+set_key('bf277b2f54255cc09463930d16f832b0')
+
 # Counter to count for n movies on the site
 m_ctr = 0
 # list containing movie objects
