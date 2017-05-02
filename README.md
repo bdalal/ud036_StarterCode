@@ -16,4 +16,5 @@ _Copyright (c) 2012-2013, Raymond Wagner_
 
 ### Thanks to
 ![](https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png)
+
 This product uses the TMDb API but is not endorsed or certified by TMDb.
