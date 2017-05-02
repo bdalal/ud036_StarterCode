@@ -1,7 +1,7 @@
 # MOVIE TRAILER WEBSITE
 
 This project uses the TMDb API to get a random set of nine movies and renders them in a web page.
-Clickin on any particular movie listing will result in it's trailer being played in an embedded player.
+Clicking on any particular movie listing will result in it's trailer being played in an embedded player.
 
 ## Run instructions
 * Make sure Python is installed on your machine.
@@ -12,6 +12,7 @@ Clickin on any particular movie listing will result in it's trailer being played
 
 ## Dependencies
 * tmdb3 (To install use `pip install tmdb3`)
+
 _Copyright (c) 2012-2013, Raymond Wagner_
 
 ### Thanks to
