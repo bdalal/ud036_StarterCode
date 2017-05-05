@@ -12,11 +12,10 @@ Clicking on any particular movie listing will result in it's trailer being playe
 
 ## Dependencies
 * tmdb3
+_Copyright (c) 2012-2013, Raymond Wagner_
 
 ## Dependency installation
 * Run `sudo pip install -r requirements.txt` to fetch all dependencies for this project
-
-_Copyright (c) 2012-2013, Raymond Wagner_
 
 ### Thanks to
 ![](https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png)
