@@ -11,7 +11,10 @@ Clicking on any particular movie listing will result in it's trailer being playe
 * Wait for a few seconds as the movies are fetched and the page rendered in the browser.
 
 ## Dependencies
-* tmdb3 (To install use `pip install tmdb3`)
+* tmdb3
+
+## Dependency installation
+* Run `sudo pip install -r requirements.txt` to fetch all dependencies for this project
 
 _Copyright (c) 2012-2013, Raymond Wagner_
 
